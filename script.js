@@ -20,7 +20,7 @@ const initials = createInitials(fullName);
 function handleClick() {
     const inputElement = document.getElementById("userInput");
     inputElement.value = "";
-    inputElement.focus()
+    inputElement.focus();
     showData();
 }
 
@@ -59,19 +59,27 @@ function handleInputChange(event) {
             return true;
         }
 
+        //Trường hợp tìm theo giỏ
+        if (/^o[0-9]+/.test(value)) {
+            if (value.toLowerCase() != item.route.toLocaleLowerCase()) {
+                console.log("sai");
+                return false;
+            }
+            return true;
+        }
+
         if (/^[^0-9]/.test(value)) {
             const result1 = item.streetName.match(new RegExp(value, "i"));
             const result2 = createInitials(item.streetName).match(new RegExp(value, "i"));
             if (result1 == null && result2 == null) return false;
             return true;
         }
-        //Trường hợp tìm theo giỏ
-        if (/^O[0-9]/.test(value)) {
-        }
     });
-    document.querySelector(".data-list").innerHTML = results
-        .map((item) => {
-            return `
+    document.querySelector(".data-list").innerHTML =
+        results?.length > 0
+            ? results
+                  .map((item) => {
+                      return `
             <div class="item">
             <div class="userImage">
                 <img src="https://hrchannels.com/Upload/avatar/20230325/144310892_Logo.png" alt="Profile Image">
@@ -82,15 +90,16 @@ function handleInputChange(event) {
             </div>
         </div>
        `;
-        })
-        .join("");
-}
+                  })
+                  .join("")
+            : '<p class="">Tuyến đường không có sẵn</p>';
+}   
 
 // Gán sự kiện onChange cho input với hàm debounce
 const inputElement = document.getElementById("userInput");
 inputElement.addEventListener("input", debounce(handleInputChange, 500)); // 500ms
 
-function showData(){
+function showData() {
     document.querySelector(".data-list").innerHTML = Object.values(MAIN_ROUTES)
         .flat()
         .map((item) => {
@@ -107,6 +116,5 @@ function showData(){
        `;
         })
         .join("");
-
 }
-showData()
+showData();
