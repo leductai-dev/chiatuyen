@@ -1,0 +1,1543 @@
+{
+    "routes": {
+        "399498551": {
+            "firstNumber": 276,
+            "key": 399498551,
+            "lastNumber": 340,
+            "route": "O2",
+            "streetName": "Trần Cao Vân",
+            "type": true,
+            "lane": "even"
+        },
+        "1583242342": {
+            "firstNumber": 209,
+            "key": "1583242342",
+            "lastNumber": 337,
+            "route": "O2",
+            "streetName": "Trần Cao Vân",
+            "type": true,
+            "lane": "odd"
+        },
+        "1742342321": {
+            "firstNumber": 401,
+            "key": "1742342321",
+            "lastNumber": 999,
+            "route": "O2",
+            "streetName": "Nguyễn Tất Thành",
+            "type": true,
+            "lane": "odd"
+        },
+        "1912312157": {
+            "firstNumber": 342,
+            "key": "1912312157",
+            "lastNumber": 624,
+            "route": "O2",
+            "streetName": "Trần Cao Vân",
+            "type": true,
+            "lane": "even"
+        },
+        "11043242342": {
+            "firstNumber": 0,
+            "key": "11043242342",
+            "lastNumber": 10000,
+            "route": "O2",
+            "streetName": "Tôn Thất Đạm",
+            "type": true,
+            "lane": "both"
+        },
+        "key_001": {
+            "firstNumber": 185,
+            "key": "key_001",
+            "lastNumber": 319,
+            "route": "O14",
+            "streetName": "Lê Duẩn",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_00113": {
+            "firstNumber": 0,
+            "key": "key_00113",
+            "lastNumber": 10000,
+            "route": "O10",
+            "streetName": "Bàu Trảng 1-7",
+            "type": true,
+            "lane": "both"
+        },
+        "key_00123": {
+            "firstNumber": 257,
+            "key": "key_00123",
+            "lastNumber": 341,
+            "route": "O14",
+            "streetName": "Hùng Vương",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_001231": {
+            "firstNumber": 220,
+            "key": "key_001231",
+            "lastNumber": 760,
+            "route": "O10",
+            "streetName": "Điện biên phủ",
+            "type": true,
+            "lane": "even"
+        },
+        "key_002": {
+            "firstNumber": 732,
+            "key": "key_002",
+            "lastNumber": 10000,
+            "route": "O12",
+            "streetName": "Trần Cao Vân",
+            "type": true,
+            "lane": "even"
+        },
+        "key_00222": {
+            "firstNumber": 327,
+            "key": "key_00222",
+            "lastNumber": 727,
+            "route": "O10",
+            "streetName": "Điện biên phủ",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_002222": {
+            "firstNumber": 188,
+            "key": "key_002222",
+            "lastNumber": 318,
+            "route": "O14",
+            "streetName": "Lê Duẩn",
+            "type": true,
+            "lane": "even"
+        },
+        "key_003": {
+            "firstNumber": 0,
+            "key": "key_003",
+            "lastNumber": 100,
+            "route": "O12",
+            "streetName": "Hà Khê (K2 > 100)",
+            "type": true,
+            "lane": "both"
+        },
+        "key_00334": {
+            "firstNumber": 292,
+            "key": "key_00334",
+            "lastNumber": 438,
+            "route": "O14",
+            "streetName": "Hùng Vương",
+            "type": true,
+            "lane": "even"
+        },
+        "key_004": {
+            "firstNumber": 0,
+            "key": "key_004",
+            "lastNumber": 10000,
+            "route": "O10",
+            "streetName": "Mẹ Nhu",
+            "type": true,
+            "lane": "both"
+        },
+        "key_005": {
+            "firstNumber": 424,
+            "key": "key_005",
+            "lastNumber": 458,
+            "route": "O14",
+            "streetName": "Ông Ích Khiêm",
+            "type": true,
+            "lane": "even"
+        },
+        "key_006": {
+            "firstNumber": 175,
+            "key": "key_006",
+            "lastNumber": 281,
+            "route": "O14",
+            "streetName": "Hải Phòng",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_006222": {
+            "firstNumber": 0,
+            "key": "key_006222",
+            "lastNumber": 10000,
+            "route": "O12",
+            "streetName": "Mẹ Hiền",
+            "type": true,
+            "lane": "both"
+        },
+        "key_007": {
+            "firstNumber": 166,
+            "key": "key_007",
+            "lastNumber": 322,
+            "route": "O15",
+            "streetName": "Hải Phòng",
+            "type": true,
+            "lane": "even"
+        },
+        "key_007323": {
+            "firstNumber": 0,
+            "key": "key_007323",
+            "lastNumber": 10000,
+            "route": "O12",
+            "streetName": "Trần Thanh Trung",
+            "type": true,
+            "lane": "both"
+        },
+        "key_008": {
+            "firstNumber": 0,
+            "key": "key_008",
+            "lastNumber": 10000,
+            "route": "O12",
+            "streetName": "Nguyễn Văn Phương",
+            "type": true,
+            "lane": "both"
+        },
+        "key_0081": {
+            "firstNumber": 0,
+            "key": "key_0081",
+            "lastNumber": 10000,
+            "route": "O15",
+            "streetName": "Lý Thái Tổ",
+            "type": true,
+            "lane": "both"
+        },
+        "key_009": {
+            "firstNumber": 0,
+            "key": "key_009",
+            "lastNumber": 10000,
+            "route": "O15",
+            "streetName": "Hoàng Hoa Thám",
+            "type": true,
+            "lane": "both"
+        },
+        "key_010": {
+            "firstNumber": 0,
+            "key": "key_010",
+            "lastNumber": 10000,
+            "route": "O16",
+            "streetName": "Đào Duy Từ",
+            "type": true,
+            "lane": "both"
+        },
+        "key_011": {
+            "firstNumber": 0,
+            "key": "key_011",
+            "lastNumber": 10000,
+            "route": "O16",
+            "streetName": "Lê Ngô Cát",
+            "type": true,
+            "lane": "both"
+        },
+        "key_011205": {
+            "firstNumber": 0,
+            "key": "key_011205",
+            "lastNumber": 10000,
+            "route": "O12",
+            "streetName": "Thanh Tân",
+            "type": true,
+            "lane": "both"
+        },
+        "key_012": {
+            "firstNumber": 152,
+            "key": "key_012",
+            "lastNumber": 422,
+            "route": "O16",
+            "streetName": "Ông Ích Khiêm",
+            "type": true,
+            "lane": "even"
+        },
+        "key_012312301": {
+            "firstNumber": 657,
+            "key": "key_012312301",
+            "lastNumber": 10000,
+            "route": "O12",
+            "streetName": "Trần Cao Vân",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_013": {
+            "firstNumber": 1,
+            "key": "key_013",
+            "lastNumber": 89,
+            "route": "O16",
+            "streetName": "Trần Cao Vân",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_014": {
+            "firstNumber": 2,
+            "key": "key_014",
+            "lastNumber": 198,
+            "route": "O16",
+            "streetName": "Trần Cao Vân",
+            "type": true,
+            "lane": "even"
+        },
+        "key_015": {
+            "firstNumber": 0,
+            "key": "key_015",
+            "lastNumber": 10000,
+            "route": "O18",
+            "streetName": "Vĩnh Trung plaza (Hùng Vương )",
+            "type": true,
+            "lane": "both"
+        },
+        "key_016": {
+            "firstNumber": 320,
+            "key": "key_016",
+            "lastNumber": 478,
+            "route": "O18",
+            "streetName": "Lê Duẩn",
+            "type": true,
+            "lane": "even"
+        },
+        "key_017": {
+            "firstNumber": 321,
+            "key": "key_017",
+            "lastNumber": 461,
+            "route": "O18",
+            "streetName": "Lê Duẩn",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_018": {
+            "firstNumber": 283,
+            "key": "key_018",
+            "lastNumber": 461,
+            "route": "O18",
+            "streetName": "Hải Phòng",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_019": {
+            "firstNumber": 0,
+            "key": "key_019",
+            "lastNumber": 10000,
+            "route": "O20",
+            "streetName": "Phần Lăng 1-19",
+            "type": true,
+            "lane": "both"
+        },
+        "key_020": {
+            "firstNumber": 0,
+            "key": "key_020",
+            "lastNumber": 10000,
+            "route": "O20",
+            "streetName": "Thúc Tề",
+            "type": true,
+            "lane": "both"
+        },
+        "key_0204": {
+            "firstNumber": 999,
+            "key": "key_0204",
+            "lastNumber": 1261,
+            "route": "O12",
+            "streetName": "Nguyễn Tất Thành",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_021": {
+            "firstNumber": 0,
+            "key": "key_021",
+            "lastNumber": 10000,
+            "route": "O20",
+            "streetName": "Đinh Núp",
+            "type": true,
+            "lane": "both"
+        },
+        "key_022": {
+            "firstNumber": 0,
+            "key": "key_022",
+            "lastNumber": 10000,
+            "route": "O20",
+            "streetName": "Trần Can",
+            "type": true,
+            "lane": "both"
+        },
+        "key_023": {
+            "firstNumber": 0,
+            "key": "key_023",
+            "lastNumber": 10000,
+            "route": "O20",
+            "streetName": "Nguyễn Công Hãng",
+            "type": true,
+            "lane": "both"
+        },
+        "key_024": {
+            "firstNumber": 0,
+            "key": "key_024",
+            "lastNumber": 10000,
+            "route": "O20",
+            "streetName": "Huỳnh Ngọc Huệ",
+            "type": true,
+            "lane": "both"
+        },
+        "key_025": {
+            "firstNumber": 0,
+            "key": "key_025",
+            "lastNumber": 10000,
+            "route": "O20",
+            "streetName": "Lý Triện",
+            "type": true,
+            "lane": "both"
+        },
+        "key_026": {
+            "firstNumber": 1,
+            "key": "key_026",
+            "lastNumber": 189,
+            "route": "O21",
+            "streetName": "Cù Chính Lan",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_027": {
+            "firstNumber": 2,
+            "key": "key_027",
+            "lastNumber": 180,
+            "route": "O21",
+            "streetName": "Cù Chính Lan",
+            "type": true,
+            "lane": "even"
+        },
+        "key_028": {
+            "firstNumber": 0,
+            "key": "key_028",
+            "lastNumber": 10000,
+            "route": "O21",
+            "streetName": "An Xuân 1",
+            "type": true,
+            "lane": "both"
+        },
+        "key_029": {
+            "firstNumber": 0,
+            "key": "key_029",
+            "lastNumber": 10000,
+            "route": "O21",
+            "streetName": "An Xuân 2",
+            "type": true,
+            "lane": "both"
+        },
+        "key_030": {
+            "firstNumber": 0,
+            "key": "key_030",
+            "lastNumber": 10000,
+            "route": "O21",
+            "streetName": "Trần Xuân Lê",
+            "type": true,
+            "lane": "both"
+        },
+        "key_031": {
+            "firstNumber": 0,
+            "key": "key_031",
+            "lastNumber": 10000,
+            "route": "O21",
+            "streetName": "Hồ Tương",
+            "type": true,
+            "lane": "both"
+        },
+        "key_032": {
+            "firstNumber": 0,
+            "key": "key_032",
+            "lastNumber": 10000,
+            "route": "O21",
+            "streetName": "Nguyễn Đăng",
+            "type": true,
+            "lane": "both"
+        },
+        "key_033": {
+            "firstNumber": 0,
+            "key": "key_033",
+            "lastNumber": 10000,
+            "route": "O21",
+            "streetName": "Nguyễn Đình Tựu (từ 180 trở lên)",
+            "type": true,
+            "lane": "both"
+        },
+        "key_034": {
+            "firstNumber": 91,
+            "key": "key_034",
+            "lastNumber": 165,
+            "route": "O22",
+            "streetName": "Cù Chính Lan",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_035": {
+            "firstNumber": 182,
+            "key": "key_035",
+            "lastNumber": 282,
+            "route": "O22",
+            "streetName": "Cù Chính Lan",
+            "type": true,
+            "lane": "even"
+        },
+        "key_036": {
+            "firstNumber": 0,
+            "key": "key_036",
+            "lastNumber": 10000,
+            "route": "O22",
+            "streetName": "Phạm Nhữ Tăng",
+            "type": true,
+            "lane": "both"
+        },
+        "key_037": {
+            "firstNumber": 0,
+            "key": "key_037",
+            "lastNumber": 10000,
+            "route": "O22",
+            "streetName": "Nguyễn Phước Thái",
+            "type": true,
+            "lane": "both"
+        },
+        "key_038": {
+            "firstNumber": 1,
+            "key": "key_038",
+            "lastNumber": 221,
+            "route": "O23",
+            "streetName": "Trường Chinh",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_039": {
+            "firstNumber": 1,
+            "key": "key_039",
+            "lastNumber": 323,
+            "route": "O23",
+            "streetName": "Nguyễn Phước Nguyên",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_040": {
+            "firstNumber": 2,
+            "key": "key_040",
+            "lastNumber": 330,
+            "route": "O23",
+            "streetName": "Nguyễn Phước Nguyên",
+            "type": true,
+            "lane": "even"
+        },
+        "key_041": {
+            "firstNumber": 0,
+            "key": "key_041",
+            "lastNumber": 10000,
+            "route": "O23",
+            "streetName": "Nguyễn Giản Thanh",
+            "type": true,
+            "lane": "both"
+        },
+        "key_042": {
+            "firstNumber": 0,
+            "key": "key_042",
+            "lastNumber": 10000,
+            "route": "O23",
+            "streetName": "Cần Giuộc",
+            "type": true,
+            "lane": "both"
+        },
+        "key_043": {
+            "firstNumber": 0,
+            "key": "key_043",
+            "lastNumber": 10000,
+            "route": "O23",
+            "streetName": "Nguyễn Khang",
+            "type": true,
+            "lane": "both"
+        },
+        "key_044": {
+            "firstNumber": 0,
+            "key": "key_044",
+            "lastNumber": 10000,
+            "route": "O23",
+            "streetName": "Nguyễn Đình Tựu",
+            "type": true,
+            "lane": "both"
+        },
+        "key_045": {
+            "firstNumber": 223,
+            "key": "key_045",
+            "lastNumber": 311,
+            "route": "O24",
+            "streetName": "Trường Chinh",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_046": {
+            "firstNumber": 0,
+            "key": "key_046",
+            "lastNumber": 10000,
+            "route": "O24",
+            "streetName": "Đinh Thị Vân",
+            "type": true,
+            "lane": "both"
+        },
+        "key_047": {
+            "firstNumber": 0,
+            "key": "key_047",
+            "lastNumber": 10000,
+            "route": "O24",
+            "streetName": "Đặng Phúc Thông",
+            "type": true,
+            "lane": "both"
+        },
+        "key_048": {
+            "firstNumber": 325,
+            "key": "key_048",
+            "lastNumber": 799,
+            "route": "O24",
+            "streetName": "Nguyễn Phước Nguyên",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_049": {
+            "firstNumber": 332,
+            "key": "key_049",
+            "lastNumber": 700,
+            "route": "O24",
+            "streetName": "Nguyễn Phước Nguyên",
+            "type": true,
+            "lane": "even"
+        },
+        "key_050": {
+            "firstNumber": 0,
+            "key": "key_050",
+            "lastNumber": 10000,
+            "route": "O24",
+            "streetName": "Đông Lợi 1",
+            "type": true,
+            "lane": "both"
+        },
+        "key_051": {
+            "firstNumber": 0,
+            "key": "key_051",
+            "lastNumber": 10000,
+            "route": "O24",
+            "streetName": "Đông Lợi 2",
+            "type": true,
+            "lane": "both"
+        },
+        "key_052": {
+            "firstNumber": 0,
+            "key": "key_052",
+            "lastNumber": 10000,
+            "route": "O24",
+            "streetName": "Đông Lợi 3",
+            "type": true,
+            "lane": "both"
+        },
+        "key_053": {
+            "firstNumber": 0,
+            "key": "key_053",
+            "lastNumber": 10000,
+            "route": "O24",
+            "streetName": "Đông Lợi 4",
+            "type": true,
+            "lane": "both"
+        },
+        "key_054": {
+            "firstNumber": 313,
+            "key": "key_054",
+            "lastNumber": 553,
+            "route": "O25",
+            "streetName": "Trường Chinh",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_055": {
+            "firstNumber": 0,
+            "key": "key_055",
+            "lastNumber": 10000,
+            "route": "O25",
+            "streetName": "Trần Thái Tông",
+            "type": true,
+            "lane": "both"
+        },
+        "key_056": {
+            "firstNumber": 0,
+            "key": "key_056",
+            "lastNumber": 10000,
+            "route": "O25",
+            "streetName": "Đỗ Đức Dục",
+            "type": true,
+            "lane": "both"
+        },
+        "key_057": {
+            "firstNumber": 1,
+            "key": "key_057",
+            "lastNumber": 17,
+            "route": "O25",
+            "streetName": "Lê Trọng Tấn",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_058": {
+            "firstNumber": 2,
+            "key": "key_058",
+            "lastNumber": 20,
+            "route": "O25",
+            "streetName": "Lê Trọng Tấn",
+            "type": true,
+            "lane": "even"
+        },
+        "key_059": {
+            "firstNumber": 0,
+            "key": "key_059",
+            "lastNumber": 10000,
+            "route": "O25",
+            "streetName": "Nguyễn Thành Năm",
+            "type": true,
+            "lane": "both"
+        },
+        "key_060": {
+            "firstNumber": 0,
+            "key": "key_060",
+            "lastNumber": 10000,
+            "route": "O25",
+            "streetName": "Nguyễn Hữu Thuận",
+            "type": true,
+            "lane": "both"
+        },
+        "key_061": {
+            "firstNumber": 0,
+            "key": "key_061",
+            "lastNumber": 10000,
+            "route": "O25",
+            "streetName": "Phạm Ngọc Mậu",
+            "type": true,
+            "lane": "both"
+        },
+        "key_062": {
+            "firstNumber": 0,
+            "key": "key_062",
+            "lastNumber": 10000,
+            "route": "O25",
+            "streetName": "Phan Xích Long",
+            "type": true,
+            "lane": "both"
+        },
+        "key_063": {
+            "firstNumber": 1,
+            "key": "key_063",
+            "lastNumber": 10,
+            "route": "O25",
+            "streetName": "Tân Hòa 1-10",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_064": {
+            "firstNumber": 74,
+            "key": "key_064",
+            "lastNumber": 182,
+            "route": "O26",
+            "streetName": "Bạch Đằng",
+            "type": true,
+            "lane": "even"
+        },
+        "key_065": {
+            "firstNumber": 40,
+            "key": "key_065",
+            "lastNumber": 168,
+            "route": "O26",
+            "streetName": "Trần Phú",
+            "type": true,
+            "lane": "even"
+        },
+        "key_066": {
+            "firstNumber": 53,
+            "key": "key_066",
+            "lastNumber": 185,
+            "route": "O26",
+            "streetName": "Trần Phú",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_067": {
+            "firstNumber": 0,
+            "key": "key_067",
+            "lastNumber": 10000,
+            "route": "O26",
+            "streetName": "Phạm Phú Thứ",
+            "type": true,
+            "lane": "both"
+        },
+        "key_068": {
+            "firstNumber": 0,
+            "key": "key_068",
+            "lastNumber": 10000,
+            "route": "O26",
+            "streetName": "Chợ Hàn",
+            "type": true,
+            "lane": "both"
+        },
+        "key_069": {
+            "firstNumber": 0,
+            "key": "key_069",
+            "lastNumber": 10000,
+            "route": "O26",
+            "streetName": "Toà nhà Indochina",
+            "type": true,
+            "lane": "both"
+        },
+        "key_070": {
+            "firstNumber": 2,
+            "key": "key_070",
+            "lastNumber": 36,
+            "route": "O26",
+            "streetName": "Hùng Vương",
+            "type": true,
+            "lane": "even"
+        },
+        "key_071": {
+            "firstNumber": 1,
+            "key": "key_071",
+            "lastNumber": 9,
+            "route": "O26",
+            "streetName": "Hùng Vương",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_072": {
+            "firstNumber": 0,
+            "key": "key_072",
+            "lastNumber": 10000,
+            "route": "O26",
+            "streetName": "Cô Giang",
+            "type": true,
+            "lane": "both"
+        },
+        "key_073": {
+            "firstNumber": 2,
+            "key": "key_073",
+            "lastNumber": 186,
+            "route": "O27",
+            "streetName": "Lê Duẩn",
+            "type": true,
+            "lane": "even"
+        },
+        "key_074": {
+            "firstNumber": 3,
+            "key": "key_074",
+            "lastNumber": 183,
+            "route": "O27",
+            "streetName": "Lê Duẩn",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_075": {
+            "firstNumber": 188,
+            "key": "key_075",
+            "lastNumber": 290,
+            "route": "O27",
+            "streetName": "Hùng Vương",
+            "type": true,
+            "lane": "even"
+        },
+        "key_076": {
+            "firstNumber": 115,
+            "key": "key_076",
+            "lastNumber": 251,
+            "route": "O27",
+            "streetName": "Hùng Vương",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_077": {
+            "firstNumber": 2,
+            "key": "key_077",
+            "lastNumber": 32,
+            "route": "O27",
+            "streetName": "Ngô Gia Tự",
+            "type": true,
+            "lane": "even"
+        },
+        "key_078": {
+            "firstNumber": 1,
+            "key": "key_078",
+            "lastNumber": 11,
+            "route": "O27",
+            "streetName": "Ngô Gia Tự",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_079": {
+            "firstNumber": 118,
+            "key": "key_079",
+            "lastNumber": 210,
+            "route": "O27",
+            "streetName": "Nguyễn Chí Thanh",
+            "type": true,
+            "lane": "even"
+        },
+        "key_080": {
+            "firstNumber": 199,
+            "key": "key_080",
+            "lastNumber": 301,
+            "route": "O27",
+            "streetName": "Nguyễn Chí Thanh",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_081": {
+            "firstNumber": 2,
+            "key": "key_081",
+            "lastNumber": 142,
+            "route": "O27",
+            "streetName": "Yên Bái",
+            "type": true,
+            "lane": "even"
+        },
+        "key_082": {
+            "firstNumber": 1,
+            "key": "key_082",
+            "lastNumber": 101,
+            "route": "O27",
+            "streetName": "Yên Bái",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_083": {
+            "firstNumber": 2,
+            "key": "key_083",
+            "lastNumber": 158,
+            "route": "O28",
+            "streetName": "Phan Châu Trinh",
+            "type": true,
+            "lane": "even"
+        },
+        "key_084": {
+            "firstNumber": 1,
+            "key": "key_084",
+            "lastNumber": 185,
+            "route": "O28",
+            "streetName": "Phan Châu Trinh",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_085": {
+            "firstNumber": 0,
+            "key": "key_085",
+            "lastNumber": 10000,
+            "route": "O28",
+            "streetName": "Phan Đình Phùng",
+            "type": true,
+            "lane": "both"
+        },
+        "key_086": {
+            "firstNumber": 0,
+            "key": "key_086",
+            "lastNumber": 10000,
+            "route": "O28",
+            "streetName": "Phạm Hồng Thái",
+            "type": true,
+            "lane": "both"
+        },
+        "key_087": {
+            "firstNumber": 0,
+            "key": "key_087",
+            "lastNumber": 10000,
+            "route": "O28",
+            "streetName": "Nguyễn Thái Học",
+            "type": true,
+            "lane": "both"
+        },
+        "key_088": {
+            "firstNumber": 0,
+            "key": "key_088",
+            "lastNumber": 10000,
+            "route": "O28",
+            "streetName": "Trần Quốc Toản",
+            "type": true,
+            "lane": "both"
+        },
+        "key_089": {
+            "firstNumber": 464,
+            "key": "key_089",
+            "lastNumber": 528,
+            "route": "O29",
+            "streetName": "Ông Ích Khiêm",
+            "type": true,
+            "lane": "even"
+        },
+        "key_090": {
+            "firstNumber": 153,
+            "key": "key_090",
+            "lastNumber": 385,
+            "route": "O29",
+            "streetName": "Ông Ích Khiêm",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_091": {
+            "firstNumber": 0,
+            "key": "key_091",
+            "lastNumber": 10000,
+            "route": "O29",
+            "streetName": "Chợ Cồn",
+            "type": true,
+            "lane": "both"
+        },
+        "key_092": {
+            "firstNumber": 34,
+            "key": "key_092",
+            "lastNumber": 110,
+            "route": "O29",
+            "streetName": "Ngô Gia Tự",
+            "type": true,
+            "lane": "even"
+        },
+        "key_093": {
+            "firstNumber": 13,
+            "key": "key_093",
+            "lastNumber": 151,
+            "route": "O29",
+            "streetName": "Ngô Gia Tự",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_094": {
+            "firstNumber": 0,
+            "key": "key_094",
+            "lastNumber": 10000,
+            "route": "O29",
+            "streetName": "Chi Lăng",
+            "type": true,
+            "lane": "both"
+        },
+        "key_095": {
+            "firstNumber": 0,
+            "key": "key_095",
+            "lastNumber": 10000,
+            "route": "O29",
+            "streetName": "Trần Bình Trọng",
+            "type": true,
+            "lane": "both"
+        },
+        "key_096": {
+            "firstNumber": 1,
+            "key": "key_096",
+            "lastNumber": 163,
+            "route": "O29",
+            "streetName": "Nguyễn Hoàng",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_097": {
+            "firstNumber": 187,
+            "key": "key_097",
+            "lastNumber": 258,
+            "route": "O30",
+            "streetName": "Bạch Đằng",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_098": {
+            "firstNumber": 170,
+            "key": "key_098",
+            "lastNumber": 270,
+            "route": "O30",
+            "streetName": "Trần Phú",
+            "type": true,
+            "lane": "even"
+        },
+        "key_099": {
+            "firstNumber": 187,
+            "key": "key_099",
+            "lastNumber": 265,
+            "route": "O30",
+            "streetName": "Trần Phú",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_100": {
+            "firstNumber": 0,
+            "key": "key_100",
+            "lastNumber": 10000,
+            "route": "O30",
+            "streetName": "Thái Phiên",
+            "type": true,
+            "lane": "both"
+        },
+        "key_101": {
+            "firstNumber": 0,
+            "key": "key_101",
+            "lastNumber": 10000,
+            "route": "O30",
+            "streetName": "Hoàng Văn Thụ",
+            "type": true,
+            "lane": "both"
+        },
+        "key_102": {
+            "firstNumber": 0,
+            "key": "key_102",
+            "lastNumber": 10000,
+            "route": "O30",
+            "streetName": "Lê Đình Dương",
+            "type": true,
+            "lane": "both"
+        },
+        "key_103": {
+            "firstNumber": 530,
+            "key": "key_103",
+            "lastNumber": 626,
+            "route": "O31",
+            "streetName": "Ông Ích Khiêm",
+            "type": true,
+            "lane": "even"
+        },
+        "key_104": {
+            "firstNumber": 387,
+            "key": "key_104",
+            "lastNumber": 465,
+            "route": "O31",
+            "streetName": "Ông Ích Khiêm",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_105": {
+            "firstNumber": 0,
+            "key": "key_105",
+            "lastNumber": 10000,
+            "route": "O31",
+            "streetName": "Triệu Nữ Vương",
+            "type": true,
+            "lane": "both"
+        },
+        "key_106": {
+            "firstNumber": 0,
+            "key": "key_106",
+            "lastNumber": 10000,
+            "route": "O31",
+            "streetName": "Trần Kế Xương",
+            "type": true,
+            "lane": "both"
+        },
+        "key_107": {
+            "firstNumber": 0,
+            "key": "key_107",
+            "lastNumber": 10000,
+            "route": "O31",
+            "streetName": "Mạc Đỉnh Chi",
+            "type": true,
+            "lane": "both"
+        },
+        "key_108": {
+            "firstNumber": 0,
+            "key": "key_108",
+            "lastNumber": 10000,
+            "route": "O31",
+            "streetName": "Đoàn Thị Điểm",
+            "type": true,
+            "lane": "both"
+        },
+        "key_109": {
+            "firstNumber": 0,
+            "key": "key_109",
+            "lastNumber": 10000,
+            "route": "O31",
+            "streetName": "Tăng Bạt Hổ",
+            "type": true,
+            "lane": "both"
+        },
+        "key_110": {
+            "firstNumber": 0,
+            "key": "key_110",
+            "lastNumber": 10000,
+            "route": "O31",
+            "streetName": "Cô Bắc",
+            "type": true,
+            "lane": "both"
+        },
+        "key_111": {
+            "firstNumber": 0,
+            "key": "key_111",
+            "lastNumber": 10000,
+            "route": "O31",
+            "streetName": "Phạm Ngũ Lão",
+            "type": true,
+            "lane": "both"
+        },
+        "key_112": {
+            "firstNumber": 0,
+            "key": "key_112",
+            "lastNumber": 10000,
+            "route": "O31",
+            "streetName": "Nguyễn Trãi",
+            "type": true,
+            "lane": "both"
+        },
+        "key_1121111": {
+            "firstNumber": 0,
+            "key": "key_1121111",
+            "lastNumber": 10000,
+            "route": "O7",
+            "streetName": "Nguyễn Biểu",
+            "type": true,
+            "lane": "both"
+        },
+        "key_11213123": {
+            "firstNumber": 0,
+            "key": "key_11213123",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Thanh Huy 1 2 3",
+            "type": true,
+            "lane": "both"
+        },
+        "key_1231231114": {
+            "firstNumber": 0,
+            "key": "key_1231231114",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Xuân Hoà 2",
+            "type": true,
+            "lane": "both"
+        },
+        "key_1234": {
+            "firstNumber": 115,
+            "key": "key_1234",
+            "lastNumber": 10000,
+            "route": "O7",
+            "streetName": "Hà Huy Tập",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_1357": {
+            "firstNumber": 0,
+            "key": "key_1357",
+            "lastNumber": 10000,
+            "route": "O4",
+            "streetName": "Xuân Hòa 1",
+            "type": true,
+            "lane": "both"
+        },
+        "key_2146456455": {
+            "firstNumber": 0,
+            "key": "key_2146456455",
+            "lastNumber": 218,
+            "route": "O6",
+            "streetName": "Điện Biên Phủ",
+            "type": true,
+            "lane": "even"
+        },
+        "key_22231233": {
+            "firstNumber": 0,
+            "key": "key_22231233",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Hà Đông 1,2,3",
+            "type": true,
+            "lane": "both"
+        },
+        "key_2223324234": {
+            "firstNumber": 1,
+            "key": "key_2223324234",
+            "lastNumber": 55,
+            "route": "O7",
+            "streetName": "Hà Huy Tập",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_31413123": {
+            "firstNumber": 0,
+            "key": "key_31413123",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Yên Khê 2",
+            "type": true,
+            "lane": "both"
+        },
+        "key_3142221": {
+            "firstNumber": 0,
+            "key": "key_3142221",
+            "lastNumber": 10000,
+            "route": "O7",
+            "streetName": "Nguyễn Nghiêm",
+            "type": true,
+            "lane": "both"
+        },
+        "key_3479": {
+            "firstNumber": 91,
+            "key": "key_3479",
+            "lastNumber": 207,
+            "route": "O5",
+            "streetName": "Trần Cao Vân",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_3851": {
+            "firstNumber": 0,
+            "key": "key_3851",
+            "lastNumber": 10000,
+            "route": "O6",
+            "streetName": "Lê Duy Đình",
+            "type": true,
+            "lane": "both"
+        },
+        "key_4242": {
+            "firstNumber": 0,
+            "key": "key_4242",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Đặng Đình Vân",
+            "type": true,
+            "lane": "both"
+        },
+        "key_42442342342": {
+            "firstNumber": 2,
+            "key": "key_42442342342",
+            "lastNumber": 68,
+            "route": "O7",
+            "streetName": "Hà Huy Tập",
+            "type": true,
+            "lane": "even"
+        },
+        "key_4563412": {
+            "firstNumber": 0,
+            "key": "key_4563412",
+            "lastNumber": 10000,
+            "route": "O4",
+            "streetName": "Hà Xuân 2",
+            "type": true,
+            "lane": "both"
+        },
+        "key_4564821": {
+            "firstNumber": 0,
+            "key": "key_4564821",
+            "lastNumber": 10000,
+            "route": "O4",
+            "streetName": "Ngô Gia Khảm",
+            "type": true,
+            "lane": "both"
+        },
+        "key_4569281": {
+            "firstNumber": 0,
+            "key": "key_4569281",
+            "lastNumber": 10000,
+            "route": "O4",
+            "streetName": "Hà Xuân 1",
+            "type": true,
+            "lane": "both"
+        },
+        "key_46456502": {
+            "firstNumber": 57,
+            "key": "key_46456502",
+            "lastNumber": 113,
+            "route": "O4",
+            "streetName": "Hà Huy Tập",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_4982": {
+            "firstNumber": 0,
+            "key": "key_4982",
+            "lastNumber": 10000,
+            "route": "O6",
+            "streetName": "Bế Văn Đàn",
+            "type": true,
+            "lane": "both"
+        },
+        "key_5122261": {
+            "firstNumber": 0,
+            "key": "key_5122261",
+            "lastNumber": 10000,
+            "route": "O7",
+            "streetName": "Thân Nhân Trung",
+            "type": true,
+            "lane": "both"
+        },
+        "key_5131261": {
+            "firstNumber": 0,
+            "key": "key_5131261",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Nguyễn Huy Lượng",
+            "type": true,
+            "lane": "both"
+        },
+        "key_56111178": {
+            "firstNumber": 0,
+            "key": "key_56111178",
+            "lastNumber": 10000,
+            "route": "O5",
+            "streetName": "Võ Văn Tần",
+            "type": true,
+            "lane": "both"
+        },
+        "key_567228": {
+            "firstNumber": 124,
+            "key": "key_567228",
+            "lastNumber": 10000,
+            "route": "O7",
+            "streetName": "Hà Huy Tập",
+            "type": true,
+            "lane": "even"
+        },
+        "key_56731238": {
+            "firstNumber": 1263,
+            "key": "key_56731238",
+            "lastNumber": 1449,
+            "route": "O8",
+            "streetName": "Nguyễn Tất Thành",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_5820": {
+            "firstNumber": 0,
+            "key": "key_5820",
+            "lastNumber": 10000,
+            "route": "O4",
+            "streetName": "Lê Quang Sung",
+            "type": true,
+            "lane": "both"
+        },
+        "key_6262": {
+            "firstNumber": 0,
+            "key": "key_6262",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Bàu Làng",
+            "type": true,
+            "lane": "both"
+        },
+        "key_6263242342": {
+            "firstNumber": 0,
+            "key": "key_6263242342",
+            "lastNumber": 10000,
+            "route": "O7",
+            "streetName": "Mai xuân thưởng",
+            "type": true,
+            "lane": "both"
+        },
+        "key_64564562": {
+            "firstNumber": 200,
+            "key": "key_64564562",
+            "lastNumber": 274,
+            "route": "O5",
+            "streetName": "Trần Cao Vân",
+            "type": true,
+            "lane": "even"
+        },
+        "key_6546734": {
+            "firstNumber": 0,
+            "key": "key_6546734",
+            "lastNumber": 10000,
+            "route": "O4",
+            "streetName": "Thái Thị Bôi",
+            "type": true,
+            "lane": "both"
+        },
+        "key_71432481": {
+            "firstNumber": 0,
+            "key": "key_71432481",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Đặng Đình Vân",
+            "type": true,
+            "lane": "both"
+        },
+        "key_7183241": {
+            "firstNumber": 0,
+            "key": "key_7183241",
+            "lastNumber": 10000,
+            "route": "O7",
+            "streetName": "Đoàn Nhữ Hài",
+            "type": true,
+            "lane": "both"
+        },
+        "key_7623": {
+            "firstNumber": 1,
+            "key": "key_7623",
+            "lastNumber": 325,
+            "route": "O6",
+            "streetName": "Điện Biên Phủ",
+            "type": true,
+            "lane": "odd"
+        },
+        "key_7649": {
+            "firstNumber": 0,
+            "key": "key_7649",
+            "lastNumber": 10000,
+            "route": "O4",
+            "streetName": "Lê Thị Xuyến",
+            "type": true,
+            "lane": "both"
+        },
+        "key_8282": {
+            "firstNumber": 0,
+            "key": "key_8282",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Nguyễn Văn Huề",
+            "type": true,
+            "lane": "both"
+        },
+        "key_8314": {
+            "firstNumber": 0,
+            "key": "key_8314",
+            "lastNumber": 10000,
+            "route": "O5",
+            "streetName": "Thuận An 1-6",
+            "type": true,
+            "lane": "both"
+        },
+        "key_879342340": {
+            "firstNumber": 0,
+            "key": "key_879342340",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Nguyễn Đức Trung",
+            "type": true,
+            "lane": "both"
+        },
+        "key_9023": {
+            "firstNumber": 70,
+            "key": "key_9023",
+            "lastNumber": 122,
+            "route": "O4",
+            "streetName": "Hà Huy Tập",
+            "type": true,
+            "lane": "even"
+        },
+        "key_9101111": {
+            "firstNumber": 0,
+            "key": "key_9101111",
+            "lastNumber": 10000,
+            "route": "O7",
+            "streetName": "Nguyễn Hồng",
+            "type": true,
+            "lane": "both"
+        },
+        "key_910123121": {
+            "firstNumber": 0,
+            "key": "key_910123121",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Nguyễn Cao",
+            "type": true,
+            "lane": "both"
+        },
+        "key_9123": {
+            "firstNumber": 0,
+            "key": "key_9123",
+            "lastNumber": 10000,
+            "route": "O5",
+            "streetName": "Lê Độ",
+            "type": true,
+            "lane": "both"
+        },
+        "key_9202123": {
+            "firstNumber": 0,
+            "key": "key_9202123",
+            "lastNumber": 10000,
+            "route": "O8",
+            "streetName": "Kỳ Đồng",
+            "type": true,
+            "lane": "both"
+        },
+        "key_92042342": {
+            "firstNumber": 0,
+            "key": "key_92042342",
+            "lastNumber": 10000,
+            "route": "O7",
+            "streetName": "Huỳnh Ngọc Huệ",
+            "type": true,
+            "lane": "even"
+        }
+    }
+}
