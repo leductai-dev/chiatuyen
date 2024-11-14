@@ -162,7 +162,9 @@ function showData() {
                           -4
                       )}</span> <span class='route-label ${route.type == true ? "main" : "sub"}'>${
                           route.type == true ? "Chính" : "Xoay"
-                      }</span></p>
+                      }</span>
+                       <a href="tel:+0929772712" class="call-button">Gọi ngay</a>
+                      </p>
             </div>
         </div>
             </div>
