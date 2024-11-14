@@ -158,13 +158,13 @@ function showData() {
                      <div class="item-options">
                         <div class="item-option">
                             <button class="btn-edit" data-id='item-${randomId}' data-index='${index}'>
-                                <i class="fa-regular fa-pen-to-square"></i>
+                            <i class="fa-solid fa-pen-to-square"></i>
                             </button>
                         </div>
                         <div class="item-option">
                             <a href="tel:${
                                 CODS[route.route]?.phone
-                            }" class="call-button"><img class='option-ico' src='./call.png' alt=''>
+                            }" class="call-button"><img class='option-ico' src='./phone-call.png' alt=''>
                                 </i></a>
                         </div>
                     </div>
