@@ -63,16 +63,12 @@
             padding: 10px;
             position: relative;
         }
-        .form-item{
-        }
+
+        .form-item {}
 
         .item-options {
-            position: absolute;
-            right: 8px;
-            width: 30px;
-            height: 100%;
-            top: 0;
-            padding: 5px 0px;
+            width: 35px;
+            min-width: 35px;
         }
 
         .item-option {
@@ -94,6 +90,7 @@
         .userImage {
             width: 60px;
             height: 60px;
+            flex-shrink: 0;
         }
 
         .userImage>img {
@@ -107,12 +104,19 @@
 
         .info {
             padding: 5px 10px;
+            flex-grow: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis
         }
 
         .person-name {
             font-size: 15px;
             font-weight: 600;
             color: aliceblue;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
         }
 
@@ -121,7 +125,9 @@
             font-size: 18px;
             margin-bottom: 9px;
             padding-top: 2px;
-
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .loading {
@@ -407,7 +413,8 @@
             margin-right: 5px;
             width: 30px;
         }
-        .fake-item{
+
+        .fake-item {
             padding: 0;
             margin: 0;
         }

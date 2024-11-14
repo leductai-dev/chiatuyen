@@ -138,37 +138,37 @@ function showData() {
                       if (route.lane == "both" && route.firstNumber == 0 && route.lastNumber == 10000) spacing = "";
                       const randomId = Math.floor(1000000 + Math.random() * 900000000);
                       return `
-            <div class='data-item' id='item-${randomId}'>
-            <div class="form-item"></div>
-                <div class="item" data-src='${CODS[route.route]?.phone}'> 
-            <div class="item-options">
-            <div class="item-option">
-            <button class="btn-edit" data-id='item-${randomId}' data-index='${index}'>
-                <i class="fa-regular fa-pen-to-square"></i>
-            </button>
-            </div>
-            <div class="item-option">
-                <a href="tel:${
-                    CODS[route.route]?.phone
-                }" class="call-button"><img class='option-ico' src='./call.png' alt=''>
-</i></a>
-            </div>
-          
-            </div>
-            <div class="userImage">
-                <img src="https://hrchannels.com/Upload/avatar/20230325/144310892_Logo.png" alt="Profile Image">
-            </div>
-            <div class="info">
-            <p  class="street-name">${route.streetName}${spacing}</p>
-                <p class="person-name"><span>${CODS[route.route]?.name} - ${CODS[route.route]?.phone.slice(
+             <div class='data-item' id='item-${randomId}'>
+                <div class="form-item"></div>
+                <div class="item" data-src='${CODS[route.route]?.phone}'>
+                   
+                    <div class="userImage">
+                        <img src="https://hrchannels.com/Upload/avatar/20230325/144310892_Logo.png" alt="Profile Image">
+                    </div>
+                    <div class="info">
+                        <p class="street-name">${route.streetName}${spacing}</p>
+                        <p class="person-name"><span>${CODS[route.route]?.name} - ${CODS[route.route]?.phone.slice(
                           -4
                       )}</span> <span class='route-label ${route.type == true ? "main" : "sub"}'>${
                           route.type == true ? "Chính" : "Xoay"
                       }</span>
-                       
-                      </p>
-            </div>
-        </div>
+
+                        </p>
+                    </div>
+                     <div class="item-options">
+                        <div class="item-option">
+                            <button class="btn-edit" data-id='item-${randomId}' data-index='${index}'>
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                        </div>
+                        <div class="item-option">
+                            <a href="tel:${
+                                CODS[route.route]?.phone
+                            }" class="call-button"><img class='option-ico' src='./call.png' alt=''>
+                                </i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
        `;
                   })
@@ -177,23 +177,23 @@ function showData() {
     listener(data);
 }
 function listener(data) {
-    // document.querySelectorAll(".item").forEach((item) => {
-    //     item.addEventListener("click", (e) => {
-    //         const text = e.target.closest(".item").getAttribute("data-src");
-    //         navigator.clipboard
-    //             .writeText(text)
-    //             .then(() => {
-    //                 document.querySelector(".notification").classList.add("visible");
-    //                 setTimeout(() => {
-    //                     document.querySelector(".notification").classList.remove("visible");
-    //                 }, 1000);
-    //             })
-    //             .catch((error) => {
-    //                 console.error("Lỗi khi sao chép:", error);
-    //                 alert("Có lỗi xảy ra khi sao chép.");
-    //             });
-    //     });
-    // });
+    document.querySelectorAll(".item").forEach((item) => {
+        item.addEventListener("click", (e) => {
+            const text = e.target.closest(".item").getAttribute("data-src");
+            navigator.clipboard
+                .writeText(text)
+                .then(() => {
+                    document.querySelector(".notification").classList.add("visible");
+                    setTimeout(() => {
+                        document.querySelector(".notification").classList.remove("visible");
+                    }, 1000);
+                })
+                .catch((error) => {
+                    console.error("Lỗi khi sao chép:", error);
+                    alert("Có lỗi xảy ra khi sao chép.");
+                });
+        });
+    });
 
     document.querySelectorAll(".item-option > button.btn-edit").forEach((item) => {
         item.addEventListener("click", (e) => {
