@@ -84,7 +84,7 @@
             outline: none;
             background: transparent;
             font-size: 18px;
-            color: #171811c4;
+            color: #02193b;
         }
 
         .userImage {
@@ -386,17 +386,35 @@
 
         .notification {
             position: fixed;
-            top: 20px;
+            top: 0;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -100%);
             width: 300px;
             padding: 10px 20px;
             box-sizing: border-box;
             background: white;
             border-radius: 1000px;
             z-index: 1000;
+            transition: all 0.2s linear;
+        }
+
+        .notification-success {
             color: green;
-            display: none;
+            border: 2px solid green;
+        }
+
+        .notification-warning {
+            color: yellow;
+            border: 2px solid yellow;
+        }
+
+        .notification-failed {
+            color: red;
+            border: 2px solid red;
+        }
+
+        .slideDown {
+            transform: translate(-50%, 50%);
         }
 
         .option-ico {
@@ -425,8 +443,7 @@
 <body>
     <div class="container">
         <div class="notification">
-            <i class="fa-solid fa-check"></i>
-            <span>Copied!</span>
+
         </div>
         <div class="banner">
         </div>

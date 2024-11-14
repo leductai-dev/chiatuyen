@@ -176,18 +176,39 @@ function showData() {
             : '<p class="">Tuyến đường không có sẵn!</p>';
     listener(data);
 }
+
+function showNotification(notification) {
+    const icon = {
+        success: '<i class="fa-solid fa-check"></i>',
+        warning: '<i class="fa-solid fa-circle-info"></i>',
+        failed: '<i class="fa-solid fa-circle-xmark"></i>',
+    };
+    const style = {
+        success: "notification-success",
+        warning: "notification-warning",
+        failed: "notification-failed",
+    };
+    const notifyIcon = icon[notification.type];
+    const notifyStyle = style[notification.type];
+    const notifyElement = document.querySelector(".notification");
+    notifyElement.classList.add(notifyStyle);
+    notifyElement.innerHTML = `
+    ${notifyIcon}
+    <span>${notification.message}</span>
+    `;
+    notifyElement.classList.add("slideDown");
+    setTimeout(() => {
+        document.querySelector(".notification").classList.remove("slideDown");
+    }, notification.timing || 1000);
+}
+
 function listener(data) {
-    document.querySelectorAll(".item").forEach((item) => {
+    document.querySelectorAll(".info").forEach((item) => {
         item.addEventListener("click", (e) => {
             const text = e.target.closest(".item").getAttribute("data-src");
             navigator.clipboard
                 .writeText(text)
-                .then(() => {
-                    document.querySelector(".notification").classList.add("visible");
-                    setTimeout(() => {
-                        document.querySelector(".notification").classList.remove("visible");
-                    }, 1000);
-                })
+                .then(() => showNotification({ type: "success", message: "Copied",timing: 1000 }))
                 .catch((error) => {
                     console.error("Lỗi khi sao chép:", error);
                     alert("Có lỗi xảy ra khi sao chép.");
@@ -350,7 +371,7 @@ function showForm(formId, route) {
             return;
         }
         console.log(route_key);
-        const key = route_key == 'null' ? Math.floor(1000000 + Math.random() * 900000000) : route_key;
+        const key = route_key == "null" ? Math.floor(1000000 + Math.random() * 900000000) : route_key;
         console.log(key);
         const data = { streetName, type, lane, firstNumber, lastNumber, route, key };
         console.log(data);
@@ -358,7 +379,7 @@ function showForm(formId, route) {
         try {
             await set(recordRef, data);
             console.log(route_key);
-            if (route_key != 'null') {
+            if (route_key != "null") {
                 ROUTES_DATA = ROUTES_DATA.map((_route) => {
                     if (_route.key == route_key) {
                         return { ...data };
