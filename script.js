@@ -128,7 +128,7 @@ function showData() {
     document.querySelector(".data-list").innerHTML =
         data.length > 0
             ? data
-                  .map((route) => {
+                  .map((route, index) => {
                       let spacing = ` (${route.firstNumber} - ${route.lastNumber == 10000 ? "Hết" : route.lastNumber})`;
                       if (route.firstNumber == 0 && route.lastNumber == 10000) spacing = "";
                       if (route.lane == "odd" && route.firstNumber == 0 && route.lastNumber == 10000)
@@ -136,20 +136,22 @@ function showData() {
                       if (route.lane == "even" && route.firstNumber == 0 && route.lastNumber == 10000)
                           spacing = " (Số chẵn)";
                       if (route.lane == "both" && route.firstNumber == 0 && route.lastNumber == 10000) spacing = "";
-                      const idRandom = Math.floor(1000000 + Math.random() * 900000000);
+                      const randomId = Math.floor(1000000 + Math.random() * 900000000);
                       return `
-            <div class='data-item' id='${idRandom}'>
+            <div class='data-item' id='item-${randomId}'>
+            <div class="form-item"></div>
                 <div class="item" data-src='${CODS[route.route]?.phone}'> 
             <div class="item-options">
             <div class="item-option">
-            <button class="btn-edit" data-src=${idRandom}>
+            <button class="btn-edit" data-id='item-${randomId}' data-index='${index}'>
                 <i class="fa-regular fa-pen-to-square"></i>
             </button>
             </div>
             <div class="item-option">
-                <button class="btn-delete" data-src="${route.key}">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
+                <a href="tel:${
+                    CODS[route.route]?.phone
+                }" class="call-button"><img class='option-ico' src='./call.png' alt=''>
+</i></a>
             </div>
           
             </div>
@@ -157,13 +159,13 @@ function showData() {
                 <img src="https://hrchannels.com/Upload/avatar/20230325/144310892_Logo.png" alt="Profile Image">
             </div>
             <div class="info">
-            <p class="street-name">${route.streetName}${spacing}</p>
+            <p  class="street-name">${route.streetName}${spacing}</p>
                 <p class="person-name"><span>${CODS[route.route]?.name} - ${CODS[route.route]?.phone.slice(
                           -4
                       )}</span> <span class='route-label ${route.type == true ? "main" : "sub"}'>${
                           route.type == true ? "Chính" : "Xoay"
                       }</span>
-                       <a href="tel:+0929772712" class="call-button">Gọi ngay</a>
+                       
                       </p>
             </div>
         </div>
@@ -172,60 +174,36 @@ function showData() {
                   })
                   .join("")
             : '<p class="">Tuyến đường không có sẵn!</p>';
-    listener();
+    listener(data);
 }
-function listener() {
-    document.querySelectorAll(".item").forEach((item) => {
-        item.addEventListener("click", (e) => {
-            const text = e.target.closest(".item").getAttribute("data-src");
-            navigator.clipboard
-                .writeText(text)
-                .then(() => {
-                    document.querySelector(".notification").classList.add("visible");
-                    setTimeout(() => {
-                        document.querySelector(".notification").classList.remove("visible");
-                    }, 1000);
-                })
-                .catch((error) => {
-                    console.error("Lỗi khi sao chép:", error);
-                    alert("Có lỗi xảy ra khi sao chép.");
-                });
-        });
-    });
+function listener(data) {
+    // document.querySelectorAll(".item").forEach((item) => {
+    //     item.addEventListener("click", (e) => {
+    //         const text = e.target.closest(".item").getAttribute("data-src");
+    //         navigator.clipboard
+    //             .writeText(text)
+    //             .then(() => {
+    //                 document.querySelector(".notification").classList.add("visible");
+    //                 setTimeout(() => {
+    //                     document.querySelector(".notification").classList.remove("visible");
+    //                 }, 1000);
+    //             })
+    //             .catch((error) => {
+    //                 console.error("Lỗi khi sao chép:", error);
+    //                 alert("Có lỗi xảy ra khi sao chép.");
+    //             });
+    //     });
+    // });
 
     document.querySelectorAll(".item-option > button.btn-edit").forEach((item) => {
         item.addEventListener("click", (e) => {
-            const dataRouteId = e?.target?.closest("button")?.getAttribute("data-src");
-            alert("Bạn không có quyền sử dụng tính năng này!");
-            return;
-            console.log(dataRouteId);
-            if (!dataRouteId) return;
-            showForm(dataRouteId);
+            const dataRouteId = e?.target?.closest("button")?.getAttribute("data-id");
+            const index = e?.target?.closest("button")?.getAttribute("data-index");
+            if (!dataRouteId || !index) return;
+            showForm(dataRouteId, data[index]);
         });
     });
-    document.querySelectorAll(".item-option > button.btn-delete").forEach((item) => {
-        item.addEventListener("click", (e) => {
-            alert("Bạn không có quyền sử dụng tính năng này!");
-            return;
-            const key = e?.target?.closest("button")?.getAttribute("data-src");
-            if (!key) return;
-            const recordRef = ref(database, `routes/${key}`);
-            const isConfirmed = confirm("Xác nhận xóa tuyến này?");
-            if (isConfirmed) {
-                remove(recordRef)
-                    .then(() => {
-                        ROUTES_DATA = ROUTES_DATA.filter((route) => route.key != key);
-                        showData();
-                        alert("Xóa thành công!");
-                    })
-                    .catch((error) => {
-                        alert("Có lỗi xảy ra trong quá trình xóa!");
-                    });
-            } else {
-                console.log("Người dùng đã hủy.");
-            }
-        });
-    });
+   
 }
 
 function handleSelectCod(value) {
@@ -243,19 +221,34 @@ function renderCods(cods) {
         })
         .join("");
 }
+
+let cacheId = null;
 function showForm(formId, route) {
     if (!formId) return;
-    console.log(document.getElementById(formId));
-    const cacheHtml = document.getElementById(formId).innerHTML;
-    document.getElementById(formId).innerHTML = `
+    //remove old form if exits
+    if (cacheId) {
+        const element = document.getElementById(cacheId);
+        if (element) {
+            element.querySelector(".form-item").innerHTML = "";
+            element.querySelector(".item").style.display = "flex";
+        }
+    }
+    // update new cache
+    cacheId = formId;
+    const formItem = document.getElementById(formId);
+    formItem.querySelector(".item").style.display = "none";
+    const _route = route
+        ? `${CODS[route.route].route} - ${CODS[route.route]?.name} - ${CODS[route.route]?.phone.slice(-4)}`
+        : "";
+    formItem.querySelector(".form-item").innerHTML = `
     <div class='form'>
-        <div class="form-title">${!route ? "Tạo tuyến đường mới" : "Cập nhật tuyến đường"}</div>
+        <div class="form-title">${!route ? "Cập nhật tuyến đường mới" : "Chỉnh sửa tuyến đường"}</div>
             <div class="form-field">
                 <div class="form-label">Tuyến đường</div>
                 <div class="form-data">
-                    <input defaultValue='${
-                        !route ? "" : "route.streetName"
-                    }' id="streetName" class="form-address" type="text">
+                    <input data-key='${route ? route.key : null}' value='${
+        !route ? "" : route.streetName
+    }' id="streetName" class="form-address" type="text">
                 </div>
             </div>
             <div class="form-double">
@@ -263,8 +256,8 @@ function showForm(formId, route) {
                     <div class="form-label">Tuyến</div>
                     <div class="form-data">
                         <select class="form-address" name="cars" id="type">
-                            <option value=true>Chính</option>
-                            <option  value=false>Phụ</option>
+                        <option  ${route?.type == true ? "selected" : ""}  value=true>Chính</option>
+                        <option ${route?.type == false ? "selected" : ""}  value=false>Phụ</option>
                         </select>
                     </div>
                 </div>
@@ -272,9 +265,10 @@ function showForm(formId, route) {
                     <div class="form-label">Loại tuyến</div>
                     <div class="form-data">
                         <select id="lane" class="form-address">
-                            <option value='both'>Cả 2</option>
-                            <option value="even">Tuyến chẵn</option>
-                            <option value="odd">Tuyển lẻ</option>
+                            <option ${route?.lane === "both" ? "selected" : ""} value="both">Cả 2</option>
+                            <option ${route?.lane === "even" ? "selected" : ""} value="even">Tuyến chẵn</option>
+                            <option ${route?.lane === "odd" ? "selected" : ""} value="odd">Tuyến lẻ</option>
+
                         </select>
                     </div>
                 </div>
@@ -283,13 +277,17 @@ function showForm(formId, route) {
                 <div class="form-field">
                     <div class="form-label">Bắt đầu</div>
                     <div class="form-data">
-                        <input id="firstNumber" placeholder="0" type="number" class="form-address" type="text">
+                        <input id="firstNumber" value="${
+                            route ? route.firstNumber : ""
+                        }" placeholder="0" type="number" class="form-address" type="text">
                     </div>
                 </div>
                 <div class="form-field">
                     <div class="form-label">Kết thúc</div>
                     <div class="form-data">
-                        <input id="lastNumber" type="number" value="" placeholder="Infinity" class="form-address"
+                        <input id="lastNumber" type="number"  value="${
+                            route ? (route.lastNumber == 10000 ? "" : route.lastNumber) : ""
+                        }" placeholder="Infinity" class="form-address"
                             type="text">
                     </div>
                 </div>
@@ -298,37 +296,30 @@ function showForm(formId, route) {
                 <div class="form-label">Giỏ</div>
                 <div class="form-data">
                     <div class="form-filter">
-                        <input id="myInput" autocomplete="off" class="form-address filter-element" type="text">
+                        <input id="myInput" value='${_route}' autocomplete="off" class="form-address filter-element" type="text">
                         <div class="select-box">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="form-submit">
-                <button class="btn-cancel"><i class="fa-solid fa-ban"></i></i> Hủy
+                 ${
+                     route
+                         ? `<button class="btn-action btn-delete" data-src=${route.key}><i class="fa-solid fa-trash"></i> Xóa
+                </button>`
+                         : ""
+                 }
+                <button class="btn-action btn-cancel"><i class="fa-solid fa-ban"></i></i> Hủy
                     bỏ</button>
-                <button class="btn-save"><i class="fa-solid fa-floppy-disk"></i> Lưu lại</button>
+                <button class="btn-action btn-save"><i class="fa-solid fa-floppy-disk"></i> ${
+                    !route ? "Cập nhật" : "Lưu lại"
+                }</button>
             </div>
     </div>
        `;
-    document.addEventListener("mousedown", (event) => {
-        const clickedElement = event.target;
-        const box = document.querySelector(".select-box");
-        if (clickedElement.hasAttribute("data-value")) {
-            handleSelectCod(clickedElement.getAttribute("data-value"));
-            box.classList.remove("visible");
-        }
-        const value = document.getElementById("myInput").value;
-        if (value.length == 0) {
-            box.classList.remove("visible");
-            return;
-        }
-        if (isValidRoute(value)) {
-            box.classList.remove("visible");
-        }
-    });
 
-    document.querySelector(".btn-save").addEventListener("click", function () {
+    document.querySelector(".btn-save").addEventListener("click", async () => {
+        const route_key = document.getElementById("streetName").getAttribute("data-key");
         const streetName = document.getElementById("streetName").value;
         const type = document.getElementById("type").value == "true" ? true : false;
         const lane = document.getElementById("lane").value;
@@ -359,22 +350,62 @@ function showForm(formId, route) {
             alert("Tuyến phải là số chẳn!");
             return;
         }
-        const key = Math.floor(1000000 + Math.random() * 900000000);
+        const key = route_key ? route_key : Math.floor(1000000 + Math.random() * 900000000);
         const data = { streetName, type, lane, firstNumber, lastNumber, route, key };
+        console.log(data);
         const recordRef = ref(database, `/routes/${key}`);
         try {
-            set(recordRef, data);
-            ROUTES_DATA.unshift(data);
-            alert("Tạo mới tuyến thành công! Giỏ " + route);
-            showData();
-            document.getElementById("streetName").value = "";
-            document.getElementById("lane").value = "both";
-            document.getElementById("firstNumber").value = "";
-            document.getElementById("lastNumber").value = "";
-            document.getElementById("streetName").focus();
-        } catch {
+            await set(recordRef, data);
+            console.log(route_key);
+            if (route_key) {
+                ROUTES_DATA = ROUTES_DATA.map((_route) => {
+                    if (_route.key == route_key) {
+                        return { ...data };
+                    }
+                    return _route;
+                });
+                showData();
+            } else {
+                ROUTES_DATA.unshift(data);
+                alert("Tạo mới tuyến thành công! Giỏ " + route);
+                showData();
+                document.getElementById("streetName").value = "";
+                document.getElementById("lane").value = "both";
+                document.getElementById("firstNumber").value = "";
+                document.getElementById("lastNumber").value = "";
+                document.getElementById("streetName").focus();
+            }
+        } catch (err) {
+            console.log(err);
             alert("Thêm thất bại!");
         }
+    });
+
+         document.querySelector("button.btn-delete").addEventListener("click", (e) => {
+        const key = document.getElementById("streetName").getAttribute("data-key");
+             if (!key) return;
+             const recordRef = ref(database, `routes/${key}`);
+             const isConfirmed = confirm("Xác nhận xóa tuyến này?");
+             if (isConfirmed) {
+                 remove(recordRef)
+                     .then(() => {
+                         ROUTES_DATA = ROUTES_DATA.filter((route) => route.key != key);
+                         showData();
+                         alert("Xóa thành công!");
+                     })
+                     .catch((error) => {
+                         alert("Có lỗi xảy ra trong quá trình xóa!");
+                     });
+             } else {
+                 console.log("Người dùng đã hủy.");
+             }
+         });
+
+    formItem.querySelector("#streetName").focus();
+    formItem.querySelector(".btn-cancel").addEventListener("click", function () {
+        formItem.querySelector(".item").style.display = "flex";
+        formItem.querySelector(".form-item").innerHTML = "";
+        cacheId = null;
     });
 
     document.getElementById("myInput")?.addEventListener("change", function (event) {
@@ -399,18 +430,29 @@ function showForm(formId, route) {
         box.innerHTML = renderCods(codList);
     });
 
+    document.addEventListener("mousedown", (event) => {
+        const clickedElement = event.target;
+        const box = document.querySelector(".select-box");
+        if (clickedElement.hasAttribute("data-value")) {
+            handleSelectCod(clickedElement.getAttribute("data-value"));
+            box.classList.remove("visible");
+        }
+        const value = document.getElementById("myInput")?.value;
+        if (value.length == 0) {
+            box.classList.remove("visible");
+            return;
+        }
+        if (isValidRoute(value)) {
+            box.classList.remove("visible");
+        }
+    });
+
     document.querySelector(".filter-element").addEventListener("click", function () {
         console.log("111");
         const box = document.querySelector(".select-box");
         const codList = Object.values(CODS);
         box.innerHTML = renderCods(codList);
         box.classList.add("visible");
-    });
-    const formItem = document.getElementById(formId);
-    formItem.querySelector("#streetName").focus();
-    formItem.querySelector(".btn-cancel").addEventListener("click", function () {
-        document.getElementById(formId).innerHTML = cacheHtml;
-        listener();
     });
 }
 
@@ -451,6 +493,6 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Lỗi khi lấy dữ liệu:", error);
         });
     document.querySelector(".add-route").addEventListener("click", function () {
-        showForm("form-container");
+        showForm("form-container", null);
     });
 });

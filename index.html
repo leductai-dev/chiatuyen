@@ -63,6 +63,8 @@
             padding: 10px;
             position: relative;
         }
+        .form-item{
+        }
 
         .item-options {
             position: absolute;
@@ -183,7 +185,7 @@
             color: white;
             background-color: #43b56f;
             border-radius: 8px;
-            padding: 9px 12px;
+            padding: 7px 11px;
             cursor: pointer;
             font-weight: bold;
             font-size: 13px;
@@ -262,10 +264,10 @@
         .form-submit {
             margin-top: 10px;
             display: flex;
-            justify-content: flex-end;
+            /* justify-content: flex-end; */
         }
 
-        .btn-save {
+        .btn-action {
             border: none;
             outline: none;
             color: white;
@@ -277,17 +279,18 @@
             font-size: 13px;
         }
 
+        .btn-save {
+            background-color: #43b56f;
+        }
+
         .btn-cancel {
-            border: none;
-            outline: none;
-            color: white;
             background-color: #d6b80b;
-            border-radius: 8px;
-            padding: 9px 12px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 13px;
+            margin-left: auto;
             margin-right: 10px;
+        }
+
+        .btn-delete {
+            background-color: #ff6f70;
         }
 
         .form-filter {
@@ -389,6 +392,25 @@
             color: green;
             display: none;
         }
+
+        .option-ico {
+            width: 20px;
+            height: 20px;
+        }
+
+        .main-title {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-ico {
+            margin-right: 5px;
+            width: 30px;
+        }
+        .fake-item{
+            padding: 0;
+            margin: 0;
+        }
     </style>
 
 </head>
@@ -402,7 +424,7 @@
         <div class="banner">
         </div>
         <div class="head-bar">
-            <h3>Tìm kiếm dữ liệu</h3>
+            <h3 class="main-title"><img class='main-ico' src='./main-ico.png' alt=''> Tìm kiếm dữ liệu</h3>
             <button class="add-route"><i class="fa-solid fa-plus"></i>
                 <span>Thêm</span></button>
         </div>
@@ -414,11 +436,10 @@
             <button id="btn-all" class="btn-tag">Tất cả</button>
             <button id="btn-main" class="btn-tag">Tuyến chính</button>
             <button id="btn-sub" class="btn-tag">Xoay ca</button>
-
-
         </div>
         <div class="form-container" id="form-container">
-
+            <div class="form-item"></div>
+            <div class="item fake-item"></div>
         </div>
         <div class="data-list">
 
