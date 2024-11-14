@@ -208,7 +208,7 @@ function listener(data) {
             const text = e.target.closest(".item").getAttribute("data-src");
             navigator.clipboard
                 .writeText(text)
-                .then(() => showNotification({ type: "success", message: "Copied",timing: 1000 }))
+                .then(() => showNotification({ type: "success", message: "Copied", timing: 1000 }))
                 .catch((error) => {
                     console.error("Lỗi khi sao chép:", error);
                     alert("Có lỗi xảy ra khi sao chép.");
@@ -277,7 +277,7 @@ function showForm(formId, route) {
                     <div class="form-data">
                         <select class="form-address" name="cars" id="type">
                         <option  ${route?.type == true ? "selected" : ""}  value=true>Chính</option>
-                        <option ${route?.type == false ? "selected" : ""}  value=false>Phụ</option>
+                        <option ${route?.type == false ? "selected" : ""}  value=false>Xoay ca</option>
                         </select>
                     </div>
                 </div>
@@ -286,8 +286,8 @@ function showForm(formId, route) {
                     <div class="form-data">
                         <select id="lane" class="form-address">
                             <option ${route?.lane === "both" ? "selected" : ""} value="both">Cả 2</option>
-                            <option ${route?.lane === "even" ? "selected" : ""} value="even">Tuyến chẵn</option>
-                            <option ${route?.lane === "odd" ? "selected" : ""} value="odd">Tuyến lẻ</option>
+                            <option ${route?.lane === "even" ? "selected" : ""} value="even">Chẵn</option>
+                            <option ${route?.lane === "odd" ? "selected" : ""} value="odd">Lẻ</option>
 
                         </select>
                     </div>
