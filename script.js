@@ -395,7 +395,7 @@ function showForm(formId, route) {
                 document.getElementById("lane").value = "both";
                 document.getElementById("firstNumber").value = "";
                 document.getElementById("lastNumber").value = "";
-                document.getElementById("streetName").focus();
+                // document.getElementById("streetName").focus();
             }
         } catch (err) {
             console.log(err);
@@ -425,7 +425,7 @@ function showForm(formId, route) {
         });
     }
 
-    formItem.querySelector("#streetName").focus();
+    // formItem.querySelector("#streetName").focus();
     formItem.querySelector(".btn-cancel").addEventListener("click", function () {
         formItem.querySelector(".item").style.display = "flex";
         formItem.querySelector(".form-item").innerHTML = "";
