@@ -203,7 +203,6 @@ function listener(data) {
             showForm(dataRouteId, data[index]);
         });
     });
-   
 }
 
 function handleSelectCod(value) {
@@ -246,7 +245,7 @@ function showForm(formId, route) {
             <div class="form-field">
                 <div class="form-label">Tuyến đường</div>
                 <div class="form-data">
-                    <input data-key='${route ? route.key : null}' value='${
+                    <input data-key=${route ? route.key : null} value='${
         !route ? "" : route.streetName
     }' id="streetName" class="form-address" type="text">
                 </div>
@@ -350,14 +349,16 @@ function showForm(formId, route) {
             alert("Tuyến phải là số chẳn!");
             return;
         }
-        const key = route_key ? route_key : Math.floor(1000000 + Math.random() * 900000000);
+        console.log(route_key);
+        const key = route_key == 'null' ? Math.floor(1000000 + Math.random() * 900000000) : route_key;
+        console.log(key);
         const data = { streetName, type, lane, firstNumber, lastNumber, route, key };
         console.log(data);
         const recordRef = ref(database, `/routes/${key}`);
         try {
             await set(recordRef, data);
             console.log(route_key);
-            if (route_key) {
+            if (route_key != 'null') {
                 ROUTES_DATA = ROUTES_DATA.map((_route) => {
                     if (_route.key == route_key) {
                         return { ...data };
@@ -381,25 +382,27 @@ function showForm(formId, route) {
         }
     });
 
-         document.querySelector("button.btn-delete").addEventListener("click", (e) => {
-        const key = document.getElementById("streetName").getAttribute("data-key");
-             if (!key) return;
-             const recordRef = ref(database, `routes/${key}`);
-             const isConfirmed = confirm("Xác nhận xóa tuyến này?");
-             if (isConfirmed) {
-                 remove(recordRef)
-                     .then(() => {
-                         ROUTES_DATA = ROUTES_DATA.filter((route) => route.key != key);
-                         showData();
-                         alert("Xóa thành công!");
-                     })
-                     .catch((error) => {
-                         alert("Có lỗi xảy ra trong quá trình xóa!");
-                     });
-             } else {
-                 console.log("Người dùng đã hủy.");
-             }
-         });
+    if (route) {
+        document.querySelector("button.btn-delete").addEventListener("click", (e) => {
+            const key = document.getElementById("streetName").getAttribute("data-key");
+            if (!key) return;
+            const recordRef = ref(database, `routes/${key}`);
+            const isConfirmed = confirm("Xác nhận xóa tuyến này?");
+            if (isConfirmed) {
+                remove(recordRef)
+                    .then(() => {
+                        ROUTES_DATA = ROUTES_DATA.filter((route) => route.key != key);
+                        showData();
+                        alert("Xóa thành công!");
+                    })
+                    .catch((error) => {
+                        alert("Có lỗi xảy ra trong quá trình xóa!");
+                    });
+            } else {
+                console.log("Người dùng đã hủy.");
+            }
+        });
+    }
 
     formItem.querySelector("#streetName").focus();
     formItem.querySelector(".btn-cancel").addEventListener("click", function () {
@@ -438,7 +441,7 @@ function showForm(formId, route) {
             box.classList.remove("visible");
         }
         const value = document.getElementById("myInput")?.value;
-        if (value.length == 0) {
+        if (value?.length == 0) {
             box.classList.remove("visible");
             return;
         }
