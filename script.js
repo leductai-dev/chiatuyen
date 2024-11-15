@@ -35,7 +35,7 @@ function debounce(func, delay) {
 function createInitials(name) {
     return name
         .split(" ")
-        .map((word) => word[0].toLowerCase())
+        .map((word) => word[0]?.toLowerCase())
         .join("");
 }
 
@@ -95,7 +95,7 @@ function searchFilter(value) {
         // Trường hợp chỉ có số
         if (/^[0-9]+/.test(value)) {
             const _number = Number(value.match(/^[0-9]+/)[0]);
-            if (_number < route.firstNumber || number > route.lastNumber) return false;
+            if (_number < route.firstNumber || _number > route.lastNumber) return false;
             if (route.lane == "both") return true;
             if (route.lane == "even" && _number % 2 == 1) return false;
             if (route.lane == "odd" && _number % 2 == 0) return false;
@@ -124,7 +124,13 @@ inputElement.addEventListener("input", debounce(handleInputChange, 500)); // 500
 function showData() {
     const inputElement = document.getElementById("userInput");
     const value = inputElement.value;
-    let data = searchFilter(value);
+    let data = searchFilter(value).sort((a, b) => {
+        const namCompare = a.streetName.localeCompare(b.streetName, undefined, { sensitivity: "base" });
+        if (namCompare != 0) {
+            return namCompare;
+        }
+        return a.firstNumber - b.firstNumber;
+    });
     document.querySelector(".data-list").innerHTML =
         data.length > 0
             ? data
@@ -361,7 +367,7 @@ function showForm(formId, route) {
         if (
             lane == "odd" &&
             (firstNumber != 0 || lastNumber != 10000) &&
-            (firstNumber % 2 == 0 || lastNumber % 2 == 0)
+            (firstNumber % 2 == 0 || (lastNumber % 2 == 0 && lastNumber != 10000))
         ) {
             alert("Tuyến phải là số lẻ!");
             return;
